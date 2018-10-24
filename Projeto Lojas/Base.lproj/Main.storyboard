@@ -781,10 +781,10 @@
             </objects>
             <point key="canvasLocation" x="1396" y="1084"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Perfil Table View Controller-->
         <scene sceneID="F74-ig-uHe">
             <objects>
-                <tableViewController id="ffp-Z4-SYe" sceneMemberID="viewController">
+                <tableViewController id="ffp-Z4-SYe" customClass="PerfilTableViewController" customModule="Projeto_Lojas" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2N2-Gg-UFH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -925,6 +925,13 @@
                             <outlet property="delegate" destination="ffp-Z4-SYe" id="4eZ-o1-BTn"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="emailPerfilLabel" destination="bON-cp-6tF" id="b3I-hQ-Eq9"/>
+                        <outlet property="fotoPerfilImageView" destination="Pcl-EJ-hLR" id="SpR-aR-Mob"/>
+                        <outlet property="nomePerfilLabel" destination="vfv-R5-XkA" id="g6Q-93-IGc"/>
+                        <outlet property="qntListasFavoritasLabel" destination="eJr-gR-mBx" id="F8d-4O-g8u"/>
+                        <outlet property="telefonePerfilLabel" destination="NCu-2B-hf4" id="rJ2-7b-etG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V01-VW-XvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
