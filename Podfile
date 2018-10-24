@@ -8,6 +8,6 @@ target 'Projeto Lojas' do
   # Pods for Projeto Lojas
   pod 'IQKeyboardManagerSwift'
   pod 'SVProgressHUD'
-  pod 'RealmSwift'
+  pod 'RealmSwift', '~> 3.11.1'
 
 end
