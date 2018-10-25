@@ -17,6 +17,8 @@ class PerfilTableViewController: UITableViewController {
     
     @IBOutlet weak var qntListasFavoritasLabel: UILabel!
     
+    var perfilControler: PerfilController = PerfilController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +28,7 @@ class PerfilTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        nomePerfilLabel.text = "xxx"
+        nomePerfilLabel.text = perfilControler.buscaUsuario()?.nome
     }
 
     // MARK: - Table view data source

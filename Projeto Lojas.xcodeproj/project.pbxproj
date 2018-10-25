@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		781B27DB21811BE90087649A /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DA21811BE90087649A /* PerfilTableViewController.swift */; };
+		9831703F218263BF00023D15 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831703E218263BF00023D15 /* PerfilController.swift */; };
 		F50B809F2141E1DD006FCEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B809E2141E1DD006FCEE4 /* AppDelegate.swift */; };
 		F50B80A42141E1DD006FCEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A22141E1DD006FCEE4 /* Main.storyboard */; };
 		F50B80A62141E1DF006FCEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A52141E1DF006FCEE4 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		7603CD92110C928BC5E95B3E /* Pods-Projeto Lojas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projeto Lojas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas.debug.xcconfig"; sourceTree = "<group>"; };
 		781B27DA21811BE90087649A /* PerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewController.swift; sourceTree = "<group>"; };
 		95F418C42601BB57AB0B0162 /* Pods_Projeto_Lojas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projeto_Lojas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9831703E218263BF00023D15 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		F50B809B2141E1DD006FCEE4 /* Projeto Lojas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto Lojas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50B809E2141E1DD006FCEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50B80A32141E1DD006FCEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		F5B8BFCB215D812500A2708C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9831703E218263BF00023D15 /* PerfilController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -216,7 +219,7 @@
 				F50B80972141E1DD006FCEE4 /* Sources */,
 				F50B80982141E1DD006FCEE4 /* Frameworks */,
 				F50B80992141E1DD006FCEE4 /* Resources */,
-				12D0A698D02A92D2E82EF813 /* [CP] Embed Pods Frameworks */,
+				0B53A296AAA1F4678AEC15BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,10 +278,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12D0A698D02A92D2E82EF813 /* [CP] Embed Pods Frameworks */ = {
+		0B53A296AAA1F4678AEC15BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas-frameworks.sh",
@@ -288,6 +293,8 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -335,6 +342,7 @@
 				F5338CFB2165A558001C2512 /* Database.swift in Sources */,
 				F5B8BFD2215D836700A2708C /* PerfilViewController.swift in Sources */,
 				F5B8BFD8215D843D00A2708C /* FavoritoDetalheViewController.swift in Sources */,
+				9831703F218263BF00023D15 /* PerfilController.swift in Sources */,
 				F5338CFF2165A952001C2512 /* Produto.swift in Sources */,
 				F5B8BFD4215D83B600A2708C /* DetalheLojaViewController.swift in Sources */,
 				F5B8BFD6215D840300A2708C /* ListaFavoritosViewController.swift in Sources */,
