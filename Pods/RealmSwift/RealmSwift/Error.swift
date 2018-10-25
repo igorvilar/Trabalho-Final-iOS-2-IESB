@@ -34,6 +34,7 @@ extension Realm {
      ```
     */
     public struct Error {
+        // swiftlint:disable:next nesting
         public typealias Code = RLMError.Code
 
         /// Error thrown by Realm if no other specific error is returned when a realm is opened.
@@ -83,7 +84,7 @@ extension Realm {
         }
 
         /// :nodoc:
-        public let _nsError: NSError
+        public var _nsError: NSError
 
         /// :nodoc:
         public init(_nsError error: NSError) {
@@ -104,9 +105,7 @@ extension Realm {
 // Provide bridging from errors with domain RLMErrorDomain to Error.
 extension Realm.Error: _BridgedStoredNSError {
     /// :nodoc:
-    public static let _nsErrorDomain = RLMErrorDomain
-    /// :nodoc:
-    public static let errorDomain = RLMErrorDomain
+    public static var _nsErrorDomain = RLMErrorDomain
 }
 
 // MARK: Equatable

@@ -6,12 +6,47 @@
 //  Copyright © 2018 com.iesb. All rights reserved.
 //
 
-class Loja {
-    var nome: String
-    var logo: String
+import RealmSwift
+
+class Loja: Object {
+    @objc dynamic var nome = ""
+    @objc dynamic var iconePequeno = ""
+    @objc dynamic var iconeGrande = ""
+    @objc dynamic var vendeComputador = false
+    @objc dynamic var vendeJogos = false
+    @objc dynamic var favorita = false
+    let produtos = List<Produto>()
     
-    init(_ nome: String, _ logo: String) {
+    override static func primaryKey() -> String? {
+        return "nome"
+    }
+    
+    convenience init(_ nome: String,
+                     iconePequeno: String,
+                     iconeGrande: String,
+                     vendeComputador: Bool,
+                     vendeJogos: Bool,
+                     favorita: Bool,
+                     produtos: List<Produto> = List<Produto>()) {
+        self.init()
         self.nome = nome
-        self.logo = logo
+        self.iconePequeno = iconePequeno
+        self.iconeGrande = iconeGrande
+        self.vendeComputador = vendeComputador
+        self.vendeJogos = vendeJogos
+        self.favorita = favorita
+        self.produtos.append(objectsIn: produtos)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

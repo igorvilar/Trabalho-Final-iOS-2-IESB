@@ -118,13 +118,10 @@ namespace sync {
 //     file identifier (UPLOAD)".
 //
 //  24 Support schema-breaking instructions. Official support for partial sync.
-//
-//  25 Include "last server version" in the UPLOAD message for history trimming
-//     on the server.
 
 constexpr int get_current_protocol_version() noexcept
 {
-    return 25;
+    return 24;
 }
 
 
@@ -245,7 +242,7 @@ enum class ProtocolError {
     bad_client_version           = 210, // Bad client version (IDENT, UPLOAD)
     diverging_histories          = 211, // Diverging histories (IDENT)
     bad_changeset                = 212, // Bad changeset (UPLOAD)
-    superseded                   = 213, // Superseded by new session for same client-side file (deprecated)
+    superseded                   = 213, // Superseded by new session for same client-side file
     disabled_session             = 213, // Alias for `superseded` (deprecated)
     partial_sync_disabled        = 214, // Partial sync disabled (BIND)
     unsupported_session_feature  = 215, // Unsupported session-level feature

@@ -18,7 +18,7 @@ class Usuario: Object {
     @objc dynamic var telefone: String = ""
     @objc dynamic var idade: Int = 0
     var listasFavoritos = List<Favorito>()
-//    var lojasServidor = List<Loja>()
+    var lojasServidor = List<Loja>()
     
     override static func primaryKey() -> String? {
         return "email"
@@ -30,7 +30,7 @@ class Usuario: Object {
                      senha: String,
                      telefone: String,
                      idade: Int,
-                     listasFavoritos: List<Favorito> = List<Favorito>()) {
+                     listasFavoritos: List<Favorito> = List<Favorito>(), lojasServidor: List<Loja> = List<Loja>()) {
         self.init()
         self.nome = nome
         self.foto = foto
@@ -39,6 +39,6 @@ class Usuario: Object {
         self.telefone = telefone
         self.idade = idade
         self.listasFavoritos = listasFavoritos
-//        self.lojasServidor = lojasServidor
+        self.lojasServidor = lojasServidor
     }
 }

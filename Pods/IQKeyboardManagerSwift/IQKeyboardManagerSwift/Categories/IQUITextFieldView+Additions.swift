@@ -79,7 +79,7 @@ public extension UIView {
 //    @objc public var enableMode: IQEnableMode {
 //        get {
 //            
-//            if let savedMode = objc_getAssociatedObject(self, &kIQKeyboardEnableMode) as? IQEnableMode {
+//            if let aValue = objc_getAssociatedObject(self, &kIQKeyboardEnableMode) as? Int, let savedMode = IQEnableMode(rawValue: aValue) {
 //                return savedMode
 //            } else {
 //                return .Default
@@ -96,7 +96,7 @@ public extension UIView {
     @objc public var shouldResignOnTouchOutsideMode: IQEnableMode {
         get {
             
-            if let savedMode = objc_getAssociatedObject(self, &kIQKeyboardShouldResignOnTouchOutsideMode) as? IQEnableMode {
+            if let aValue = objc_getAssociatedObject(self, &kIQKeyboardShouldResignOnTouchOutsideMode) as? Int, let savedMode = IQEnableMode(rawValue: aValue) {
                 return savedMode
             } else {
                 return .Default

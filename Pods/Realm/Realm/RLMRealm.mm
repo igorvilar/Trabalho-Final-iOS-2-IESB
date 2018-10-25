@@ -609,11 +609,11 @@ REALM_NOINLINE static void translateSharedGroupOpenException(RLMRealmConfigurati
     }
 }
 
-- (void)transactionWithBlock:(__attribute__((noescape)) void(^)(void))block {
+- (void)transactionWithBlock:(void(^)(void))block {
     [self transactionWithBlock:block error:nil];
 }
 
-- (BOOL)transactionWithBlock:(__attribute__((noescape)) void(^)(void))block error:(NSError **)outError {
+- (BOOL)transactionWithBlock:(void(^)(void))block error:(NSError **)outError {
     [self beginWriteTransaction];
     block();
     if (_realm->is_in_transaction()) {

@@ -17,6 +17,10 @@ class BuscaLojasTableViewController: UITableViewController, UISearchBarDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //REMOVER!!!!!!
+        controller.selectDasOutrasTelas()
+        
+        self.tableView.reloadData()
         searchBar.delegate = self
     }
     
@@ -36,7 +40,13 @@ class BuscaLojasTableViewController: UITableViewController, UISearchBarDelegate 
         if let cellLoja = cell as? LojaTableViewCell {
             cellLoja.nomeLoja.text = controller.nomeDaLoja(indexPath.row)
             cellLoja.logoLoja.image = UIImage(named: controller.nomeLogoLoja(indexPath.row))
-            cellLoja.likeButton.imageView?.image = UIImage(named: "like")
+            let nomeImagemFavorita = controller.isLojaFavorita(indexPath.row) ? "liked" : "like"
+            let imagemLike = UIImage(named: nomeImagemFavorita)
+            let imagemBotao = UIImageView(image: imagemLike)
+            cellLoja.likeButton.imageView?.image = imagemLike
+            
+            cellLoja.vendeJogos.image = controller.vendeJogos(indexPath.row) ? UIImage(named: "video-game") : nil
+            cellLoja.vendeComputador.image = controller.vendeComputadores(indexPath.row) ? UIImage(named: "pc") : nil
             
             return cellLoja
         }

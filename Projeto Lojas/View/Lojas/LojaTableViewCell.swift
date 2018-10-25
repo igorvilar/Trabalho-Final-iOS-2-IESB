@@ -13,6 +13,8 @@ class LojaTableViewCell: UITableViewCell {
     @IBOutlet weak var logoLoja: UIImageView!
     @IBOutlet weak var nomeLoja: UILabel!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var vendeJogos: UIImageView!
+    @IBOutlet weak var vendeComputador: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,15 +12,27 @@ import RealmSwift
 
 class Favorito: Object {
     @objc dynamic var nome: String = ""
-//    let lojas = List<Loja>()
+    let lojas = List<Loja>()
     
     override static func primaryKey() -> String? {
         return "nome"
     }
     
-    convenience init(nome: String) {
+    convenience init(nome: String, lojas: List<Loja> = List<Loja>()) {
         self.init()
         self.nome = nome
-//        self.lojas.append(objectsIn: lojas)
+        self.lojas.append(objectsIn: lojas)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
