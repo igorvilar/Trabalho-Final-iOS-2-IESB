@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706021829EAC00023D15 /* PerfilTableViewController.swift */; };
 		7802F55B21891979009E8473 /* MinhasListasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802F55A21891979009E8473 /* MinhasListasController.swift */; };
 		7802F55D21892ADC009E8473 /* CriarListaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */; };
 		781B27DD2185ED400087649A /* MinhasListasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */; };
 		781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */; };
+		78F6BDC7218938180009152D /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6BDC6218938180009152D /* PerfilController.swift */; };
+		9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706021829EAC00023D15 /* PerfilTableViewController.swift */; };
 		F50B809F2141E1DD006FCEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B809E2141E1DD006FCEE4 /* AppDelegate.swift */; };
 		F50B80A42141E1DD006FCEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A22141E1DD006FCEE4 /* Main.storyboard */; };
 		F50B80A62141E1DF006FCEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A52141E1DF006FCEE4 /* Assets.xcassets */; };
@@ -40,9 +41,9 @@
 		7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarListaTableViewCell.swift; sourceTree = "<group>"; };
 		781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhasListasTableViewController.swift; sourceTree = "<group>"; };
 		781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhasListasTableViewCell.swift; sourceTree = "<group>"; };
+		78F6BDC6218938180009152D /* PerfilController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		95F418C42601BB57AB0B0162 /* Pods_Projeto_Lojas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projeto_Lojas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9831706021829EAC00023D15 /* PerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewController.swift; sourceTree = "<group>"; };
-		9831706221887FEF00023D15 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		F50B809B2141E1DD006FCEE4 /* Projeto Lojas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto Lojas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50B809E2141E1DD006FCEE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F50B80A32141E1DD006FCEE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -219,7 +220,7 @@
 		F5B8BFCB215D812500A2708C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9831706221887FEF00023D15 /* PerfilController.swift */,
+				78F6BDC6218938180009152D /* PerfilController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -231,12 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F50B80AD2141E1DF006FCEE4 /* Build configuration list for PBXNativeTarget "Projeto Lojas" */;
 			buildPhases = (
-				783AF0E2DFBED8A4EFCA85E2 /* [CP] Check Pods Manifest.lock */,
+				24EFEAD258AAE3F396CC31C9 /* [CP] Check Pods Manifest.lock */,
 				F50B80972141E1DD006FCEE4 /* Sources */,
 				F50B80982141E1DD006FCEE4 /* Frameworks */,
 				F50B80992141E1DD006FCEE4 /* Resources */,
-
-				24EFEAD258AAE3F396CC31C9 /* [CP] Embed Pods Frameworks */,
+				50595F5FECAF6D9CB09FBD31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,20 +295,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-
-		24EFEAD258AAE3F396CC31C9 /* [CP] Embed Pods Frameworks */ = {
+		24EFEAD258AAE3F396CC31C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
@@ -319,7 +313,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		93610A3422E280337C7D0248 /* [CP] Embed Pods Frameworks */ = {
+		50595F5FECAF6D9CB09FBD31 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,6 +363,7 @@
 				7802F55B21891979009E8473 /* MinhasListasController.swift in Sources */,
 				F5463C40214B2328000B4B90 /* LojaTableViewCell.swift in Sources */,
 				F5338D052165AA08001C2512 /* Favorito.swift in Sources */,
+				78F6BDC7218938180009152D /* PerfilController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
