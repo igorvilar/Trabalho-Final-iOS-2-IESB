@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4pK-qh-R7A">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QV2-kH-at4">
+>>>>>>> transformar cena minhas listas
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +14,115 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Minhas Listas Table View Controller-->
+        <scene sceneID="oov-D6-nzq">
+            <objects>
+                <tableViewController id="RzQ-jX-kiv" customClass="MinhasListasTableViewController" customModule="Projeto_Lojas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="AQZ-rz-QOM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MinhasListasTableViewCell" rowHeight="130" id="jIp-Oh-jrf" customClass="MinhasListasTableViewCell" customModule="Projeto_Lojas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jIp-Oh-jrf" id="SKH-ll-BdL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwQ-0i-KIO">
+                                            <rect key="frame" x="16" y="15" width="343" height="100"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lojas Jogos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-j7-kg8">
+                                                    <rect key="frame" x="8" y="12" width="327" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="29" id="QUB-GY-f6c"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 LOJAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn4-Vt-rSO">
+                                                    <rect key="frame" x="8" y="74" width="327" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="DMU-H0-nDh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="yn4-Vt-rSO" secondAttribute="trailing" constant="8" id="Kks-Nj-FQJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="yn4-Vt-rSO" secondAttribute="bottom" constant="12" id="LQt-WI-aRS"/>
+                                                <constraint firstAttribute="height" constant="100" id="MpU-Ez-v4w"/>
+                                                <constraint firstItem="gEW-j7-kg8" firstAttribute="top" secondItem="RwQ-0i-KIO" secondAttribute="top" constant="12" id="QEq-8k-BHz"/>
+                                                <constraint firstAttribute="trailing" secondItem="gEW-j7-kg8" secondAttribute="trailing" constant="8" id="Qrj-bY-oSD"/>
+                                                <constraint firstItem="gEW-j7-kg8" firstAttribute="leading" secondItem="RwQ-0i-KIO" secondAttribute="leading" constant="8" id="U5z-bp-zTh"/>
+                                                <constraint firstItem="yn4-Vt-rSO" firstAttribute="leading" secondItem="RwQ-0i-KIO" secondAttribute="leading" constant="8" id="ZPR-Z2-Cu7"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RwQ-0i-KIO" secondAttribute="bottom" constant="4" id="AuW-Ky-cqb"/>
+                                        <constraint firstItem="RwQ-0i-KIO" firstAttribute="leading" secondItem="SKH-ll-BdL" secondAttribute="leadingMargin" id="GnP-TO-lOd"/>
+                                        <constraint firstItem="RwQ-0i-KIO" firstAttribute="trailing" secondItem="SKH-ll-BdL" secondAttribute="trailingMargin" id="ZZy-4G-UtX"/>
+                                        <constraint firstItem="RwQ-0i-KIO" firstAttribute="top" secondItem="SKH-ll-BdL" secondAttribute="topMargin" constant="4" id="eQE-bv-jnk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nomeLojaLabel" destination="gEW-j7-kg8" id="6xx-BK-2dI"/>
+                                    <outlet property="quantidadeLojasLabel" destination="yn4-Vt-rSO" id="i2n-K6-j1n"/>
+                                    <segue destination="qDh-Nc-1aK" kind="show" identifier="MinhasListasTableViewCellSegue" id="4mj-73-Abx"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CriarListaTableViewCell" rowHeight="130" id="qQS-Qf-7VL" customClass="CriarListaTableViewCell" customModule="Projeto_Lojas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="185.5" width="375" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qQS-Qf-7VL" id="gko-dh-sBl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-big" translatesAutoresizingMaskIntoConstraints="NO" id="1so-XO-7SV">
+                                            <rect key="frame" x="140.5" y="9" width="94" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="85" id="HD6-3T-UVj"/>
+                                                <constraint firstAttribute="width" constant="94" id="R5G-A9-MMo"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crie aqui uma lista com lojas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bD8-fV-8UP">
+                                            <rect key="frame" x="16" y="100" width="343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="u4s-sF-nU0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="bD8-fV-8UP" secondAttribute="bottom" constant="9" id="21J-dr-t6K"/>
+                                        <constraint firstItem="1so-XO-7SV" firstAttribute="top" secondItem="gko-dh-sBl" secondAttribute="topMargin" constant="-2" id="4I7-j4-Rwg"/>
+                                        <constraint firstItem="bD8-fV-8UP" firstAttribute="top" secondItem="1so-XO-7SV" secondAttribute="bottom" constant="6" id="XgN-3R-H4B"/>
+                                        <constraint firstItem="1so-XO-7SV" firstAttribute="centerX" secondItem="gko-dh-sBl" secondAttribute="centerX" id="bma-5Q-XGV"/>
+                                        <constraint firstItem="bD8-fV-8UP" firstAttribute="trailing" secondItem="gko-dh-sBl" secondAttribute="trailingMargin" id="hox-Eh-T5d"/>
+                                        <constraint firstItem="bD8-fV-8UP" firstAttribute="leading" secondItem="gko-dh-sBl" secondAttribute="leadingMargin" id="nyO-Uv-rcn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RzQ-jX-kiv" id="Gvg-fT-5P4"/>
+                            <outlet property="delegate" destination="RzQ-jX-kiv" id="PGP-WO-0S1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="trr-aW-lDb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bne-4O-BH8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="-430"/>
+        </scene>
         <!--Minhas Listas-->
         <scene sceneID="0ba-Ad-5Oy">
             <objects>
@@ -19,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCE-Z8-fuT">
-                                <rect key="frame" x="16" y="86" width="343" height="100"/>
+                                <rect key="frame" x="16" y="42" width="343" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lojas Jogos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-5T-vEW">
                                         <rect key="frame" x="8" y="12" width="327" height="29"/>
@@ -35,9 +148,6 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIK-fL-6it">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
-                                        <connections>
-                                            <segue destination="qDh-Nc-1aK" kind="show" id="OxK-3p-yjM"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +166,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwd-GN-Bt1">
-                                <rect key="frame" x="16" y="206" width="343" height="100"/>
+                                <rect key="frame" x="16" y="162" width="343" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 LOJAS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3P-6h-0Ab">
                                         <rect key="frame" x="8" y="73.5" width="327" height="13.5"/>
@@ -72,9 +182,6 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joC-sa-ZgM">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
-                                        <connections>
-                                            <segue destination="qDh-Nc-1aK" kind="show" id="zCD-jL-E8S"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ffd-Me-UIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426" y="-430"/>
+            <point key="canvasLocation" x="-447" y="-1159"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w7Y-fY-zoA">
@@ -686,7 +793,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="NMb-Ad-u6q" kind="relationship" relationship="rootViewController" id="2UX-QO-bw2"/>
+                        <segue destination="RzQ-jX-kiv" kind="relationship" relationship="rootViewController" id="oJl-iE-Jxe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5V-oS-yBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -700,6 +807,69 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pxo-Au-slQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<<<<<<< HEAD
+=======
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login-background" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-bY-eYG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-logged" translatesAutoresizingMaskIntoConstraints="NO" id="Gfi-bh-UYG">
+                                <rect key="frame" x="137.5" y="50" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0Xk-lW-qOa"/>
+                                    <constraint firstAttribute="width" secondItem="Gfi-bh-UYG" secondAttribute="height" multiplier="1:1" id="68i-j2-uYA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paula Silva Sauro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="Foe-Jm-Csn">
+                                <rect key="frame" x="16" y="172" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="paula.silva@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rA2-HI-wpA">
+                                <rect key="frame" x="16" y="233" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(61) 8888-8888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHJ-Lz-uyd">
+                                <rect key="frame" x="16" y="276" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkK-PD-RB0">
+                                <rect key="frame" x="97.5" y="330" width="180" height="108"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liked" translatesAutoresizingMaskIntoConstraints="NO" id="tHY-dt-TYX">
+                                        <rect key="frame" x="60" y="8" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="bHb-g1-ZAn"/>
+                                            <constraint firstAttribute="width" constant="60" id="dK2-zs-T6D"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 listas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="dcg-J2-JaK">
+                                        <rect key="frame" x="8" y="76" width="164" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="GjT-dH-xar"/>
+                                    <constraint firstItem="dcg-J2-JaK" firstAttribute="top" secondItem="tHY-dt-TYX" secondAttribute="bottom" constant="8" id="Omu-bU-7Uv"/>
+                                    <constraint firstItem="dcg-J2-JaK" firstAttribute="leading" secondItem="UkK-PD-RB0" secondAttribute="leading" constant="8" id="efu-eD-5aA"/>
+                                    <constraint firstAttribute="trailing" secondItem="tHY-dt-TYX" secondAttribute="trailing" constant="60" id="fpg-10-P3d"/>
+                                    <constraint firstItem="tHY-dt-TYX" firstAttribute="leading" secondItem="UkK-PD-RB0" secondAttribute="leading" constant="60" id="jD9-sg-Aym"/>
+                                    <constraint firstAttribute="trailing" secondItem="dcg-J2-JaK" secondAttribute="trailing" constant="8" id="kR6-8y-95w"/>
+                                    <constraint firstAttribute="height" constant="108" id="qcU-Uv-Pzw"/>
+                                    <constraint firstItem="tHY-dt-TYX" firstAttribute="top" secondItem="UkK-PD-RB0" secondAttribute="top" constant="8" id="ycy-Ap-SPn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+>>>>>>> transformar cena minhas listas
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="87h-bX-ElB">
@@ -1411,12 +1581,12 @@
     </scenes>
     <resources>
         <image name="add-big" width="126" height="126"/>
-        <image name="exit" width="512" height="512"/>
+        <image name="exit" width="409.60000610351562" height="409.60000610351562"/>
         <image name="header-bahianinho" width="644" height="599"/>
-        <image name="iphonex" width="3476" height="3456"/>
+        <image name="iphonex" width="834.239990234375" height="829.44000244140625"/>
         <image name="like" width="25" height="25"/>
         <image name="liked" width="70" height="63"/>
-        <image name="login-background" width="3448" height="4592"/>
+        <image name="login-background" width="827.52001953125" height="1102.0799560546875"/>
         <image name="logo" width="512" height="474"/>
         <image name="logo_ricardo_eletro" width="1135" height="393"/>
         <image name="map" width="145" height="36"/>
@@ -1427,7 +1597,4 @@
         <image name="user-logo" width="150" height="150"/>
         <image name="video-game" width="60" height="39"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="OxK-3p-yjM"/>
-    </inferredMetricsTieBreakers>
 </document>

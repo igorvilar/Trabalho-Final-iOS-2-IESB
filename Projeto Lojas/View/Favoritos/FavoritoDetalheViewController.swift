@@ -9,8 +9,11 @@
 import UIKit
 
 class FavoritoDetalheViewController: UIViewController {
+    
+    var nomeLoja : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(nomeLoja)
     }
 }

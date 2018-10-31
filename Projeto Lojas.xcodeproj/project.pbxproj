@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706021829EAC00023D15 /* PerfilTableViewController.swift */; };
 		9831706321887FEF00023D15 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706221887FEF00023D15 /* PerfilController.swift */; };
+=======
+		7802F55B21891979009E8473 /* MinhasListasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802F55A21891979009E8473 /* MinhasListasController.swift */; };
+		7802F55D21892ADC009E8473 /* CriarListaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */; };
+		781B27DD2185ED400087649A /* MinhasListasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */; };
+		781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */; };
+>>>>>>> transformar cena minhas listas
 		F50B809F2141E1DD006FCEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B809E2141E1DD006FCEE4 /* AppDelegate.swift */; };
 		F50B80A42141E1DD006FCEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A22141E1DD006FCEE4 /* Main.storyboard */; };
 		F50B80A62141E1DF006FCEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A52141E1DF006FCEE4 /* Assets.xcassets */; };
@@ -33,6 +40,10 @@
 /* Begin PBXFileReference section */
 		74CB775928536D8C1755555D /* Pods-Projeto Lojas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projeto Lojas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas.release.xcconfig"; sourceTree = "<group>"; };
 		7603CD92110C928BC5E95B3E /* Pods-Projeto Lojas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projeto Lojas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas.debug.xcconfig"; sourceTree = "<group>"; };
+		7802F55A21891979009E8473 /* MinhasListasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MinhasListasController.swift; path = "Projeto Lojas/View/Favoritos/Cell/MinhasListasController.swift"; sourceTree = SOURCE_ROOT; };
+		7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarListaTableViewCell.swift; sourceTree = "<group>"; };
+		781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhasListasTableViewController.swift; sourceTree = "<group>"; };
+		781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhasListasTableViewCell.swift; sourceTree = "<group>"; };
 		95F418C42601BB57AB0B0162 /* Pods_Projeto_Lojas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projeto_Lojas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9831706021829EAC00023D15 /* PerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewController.swift; sourceTree = "<group>"; };
 		9831706221887FEF00023D15 /* PerfilController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
@@ -76,6 +87,15 @@
 				95F418C42601BB57AB0B0162 /* Pods_Projeto_Lojas.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		781B27DE2185EDDC0087649A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */,
+				7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		84A7E93F8CC72D2F8AB65B64 /* Pods */ = {
@@ -154,8 +174,10 @@
 		F5B8BFC6215D7FBF00A2708C /* Favoritos */ = {
 			isa = PBXGroup;
 			children = (
+				781B27DE2185EDDC0087649A /* Cell */,
 				F5B8BFD5215D840300A2708C /* ListaFavoritosViewController.swift */,
 				F5B8BFD7215D843D00A2708C /* FavoritoDetalheViewController.swift */,
+				781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */,
 			);
 			path = Favoritos;
 			sourceTree = "<group>";
@@ -185,6 +207,7 @@
 		F5B8BFC9215D7FDD00A2708C /* Favoritos */ = {
 			isa = PBXGroup;
 			children = (
+				7802F55A21891979009E8473 /* MinhasListasController.swift */,
 			);
 			path = Favoritos;
 			sourceTree = "<group>";
@@ -216,7 +239,11 @@
 				F50B80972141E1DD006FCEE4 /* Sources */,
 				F50B80982141E1DD006FCEE4 /* Frameworks */,
 				F50B80992141E1DD006FCEE4 /* Resources */,
+<<<<<<< HEAD
 				24EFEAD258AAE3F396CC31C9 /* [CP] Embed Pods Frameworks */,
+=======
+				93610A3422E280337C7D0248 /* [CP] Embed Pods Frameworks */,
+>>>>>>> transformar cena minhas listas
 			);
 			buildRules = (
 			);
@@ -275,12 +302,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+<<<<<<< HEAD
 		24EFEAD258AAE3F396CC31C9 /* [CP] Embed Pods Frameworks */ = {
+=======
+		783AF0E2DFBED8A4EFCA85E2 /* [CP] Check Pods Manifest.lock */ = {
+>>>>>>> transformar cena minhas listas
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+<<<<<<< HEAD
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+=======
+			name = "[CP] Check Pods Manifest.lock";
+>>>>>>> transformar cena minhas listas
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Projeto Lojas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93610A3422E280337C7D0248 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas-frameworks.sh",
@@ -290,8 +345,6 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -303,24 +356,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		783AF0E2DFBED8A4EFCA85E2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Projeto Lojas-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -329,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B8BFD0215D833F00A2708C /* LoginViewController.swift in Sources */,
+				7802F55D21892ADC009E8473 /* CriarListaTableViewCell.swift in Sources */,
 				F5F816AF21545B9C0083FDA2 /* BuscaLojasController.swift in Sources */,
 				F5338D032165A9E8001C2512 /* Usuario.swift in Sources */,
 				9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */,
@@ -336,12 +372,18 @@
 				F50B80B12141EF5D006FCEE4 /* CadastroTableViewController.swift in Sources */,
 				F50B809F2141E1DD006FCEE4 /* AppDelegate.swift in Sources */,
 				F5463C42214B2567000B4B90 /* BuscaLojasTableViewController.swift in Sources */,
+				781B27DD2185ED400087649A /* MinhasListasTableViewController.swift in Sources */,
 				F5338CFB2165A558001C2512 /* Database.swift in Sources */,
 				F5B8BFD8215D843D00A2708C /* FavoritoDetalheViewController.swift in Sources */,
+<<<<<<< HEAD
 				9831706321887FEF00023D15 /* PerfilController.swift in Sources */,
+=======
+				781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */,
+>>>>>>> transformar cena minhas listas
 				F5338CFF2165A952001C2512 /* Produto.swift in Sources */,
 				F5B8BFD4215D83B600A2708C /* DetalheLojaViewController.swift in Sources */,
 				F5B8BFD6215D840300A2708C /* ListaFavoritosViewController.swift in Sources */,
+				7802F55B21891979009E8473 /* MinhasListasController.swift in Sources */,
 				F5463C40214B2328000B4B90 /* LojaTableViewCell.swift in Sources */,
 				F5338D052165AA08001C2512 /* Favorito.swift in Sources */,
 			);
