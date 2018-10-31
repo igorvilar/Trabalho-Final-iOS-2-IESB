@@ -7,15 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706021829EAC00023D15 /* PerfilTableViewController.swift */; };
-		9831706321887FEF00023D15 /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706221887FEF00023D15 /* PerfilController.swift */; };
-=======
 		7802F55B21891979009E8473 /* MinhasListasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802F55A21891979009E8473 /* MinhasListasController.swift */; };
 		7802F55D21892ADC009E8473 /* CriarListaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */; };
 		781B27DD2185ED400087649A /* MinhasListasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */; };
 		781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */; };
->>>>>>> transformar cena minhas listas
 		F50B809F2141E1DD006FCEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B809E2141E1DD006FCEE4 /* AppDelegate.swift */; };
 		F50B80A42141E1DD006FCEE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A22141E1DD006FCEE4 /* Main.storyboard */; };
 		F50B80A62141E1DF006FCEE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50B80A52141E1DF006FCEE4 /* Assets.xcassets */; };
@@ -239,11 +235,8 @@
 				F50B80972141E1DD006FCEE4 /* Sources */,
 				F50B80982141E1DD006FCEE4 /* Frameworks */,
 				F50B80992141E1DD006FCEE4 /* Resources */,
-<<<<<<< HEAD
+
 				24EFEAD258AAE3F396CC31C9 /* [CP] Embed Pods Frameworks */,
-=======
-				93610A3422E280337C7D0248 /* [CP] Embed Pods Frameworks */,
->>>>>>> transformar cena minhas listas
 			);
 			buildRules = (
 			);
@@ -302,11 +295,8 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-<<<<<<< HEAD
+
 		24EFEAD258AAE3F396CC31C9 /* [CP] Embed Pods Frameworks */ = {
-=======
-		783AF0E2DFBED8A4EFCA85E2 /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> transformar cena minhas listas
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -317,13 +307,10 @@
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
-<<<<<<< HEAD
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
-=======
 			name = "[CP] Check Pods Manifest.lock";
->>>>>>> transformar cena minhas listas
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Projeto Lojas-checkManifestLockResult.txt",
 			);
@@ -375,11 +362,7 @@
 				781B27DD2185ED400087649A /* MinhasListasTableViewController.swift in Sources */,
 				F5338CFB2165A558001C2512 /* Database.swift in Sources */,
 				F5B8BFD8215D843D00A2708C /* FavoritoDetalheViewController.swift in Sources */,
-<<<<<<< HEAD
-				9831706321887FEF00023D15 /* PerfilController.swift in Sources */,
-=======
 				781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */,
->>>>>>> transformar cena minhas listas
 				F5338CFF2165A952001C2512 /* Produto.swift in Sources */,
 				F5B8BFD4215D83B600A2708C /* DetalheLojaViewController.swift in Sources */,
 				F5B8BFD6215D840300A2708C /* ListaFavoritosViewController.swift in Sources */,
