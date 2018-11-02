@@ -359,6 +359,9 @@
                                                     <state key="normal" title="CADASTRE-SE">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="cadastrar:" destination="Lqf-gu-WL4" eventType="touchUpInside" id="fFY-j3-NSq"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -380,6 +383,11 @@
                     <navigationItem key="navigationItem" id="LGj-4D-ewk"/>
                     <connections>
                         <outlet property="botaoCadastro" destination="SD3-Xk-Btm" id="hB5-Xg-2zh"/>
+                        <outlet property="email" destination="1jW-9M-QVS" id="H88-gR-sPT"/>
+                        <outlet property="idade" destination="F4D-yL-8Hg" id="NcV-rg-cTj"/>
+                        <outlet property="nome" destination="2jJ-Qi-SNf" id="gyF-Xj-Gzu"/>
+                        <outlet property="senha" destination="Y7u-gY-wjI" id="IM8-Em-gI2"/>
+                        <outlet property="telefone" destination="3aD-aT-5tB" id="nqh-cz-llc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHv-Dv-89f" userLabel="First Responder" sceneMemberID="firstResponder"/>
