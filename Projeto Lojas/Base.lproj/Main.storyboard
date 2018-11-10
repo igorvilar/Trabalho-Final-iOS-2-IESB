@@ -877,11 +877,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celulaIdentifier" id="xab-4d-FAP">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celulaIdentifier" rowHeight="55" id="xab-4d-FAP" customClass="DetalhaProdutoTableViewCell" customModule="Projeto_Lojas" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xab-4d-FAP" id="iFj-Sa-W4u">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xab-4d-FAP" id="iFj-Sa-W4u">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphonex" translatesAutoresizingMaskIntoConstraints="NO" id="cJc-n3-hEB">
@@ -898,17 +898,14 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Troca de Tela" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZj-XY-7K3">
-                                                    <rect key="frame" x="63" y="1" width="93.5" height="18"/>
+                                                    <rect key="frame" x="63" y="1" width="280" height="18"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="titulo"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-7N-8Ix">
-                                                    <rect key="frame" x="63" y="25" width="41.5" height="15"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="c7e-b2-jOm"/>
-                                                    </constraints>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="iPhone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-7N-8Ix">
+                                                    <rect key="frame" x="63" y="24" width="280" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.3878579231" green="0.3878579231" blue="0.3878579231" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -916,18 +913,26 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="cJc-n3-hEB" secondAttribute="bottom" constant="2.5" id="7od-Es-yci"/>
-                                                <constraint firstItem="jZj-XY-7K3" firstAttribute="top" secondItem="cJc-n3-hEB" secondAttribute="top" id="Azh-3L-26M"/>
-                                                <constraint firstItem="jZj-XY-7K3" firstAttribute="leading" secondItem="bjk-7N-8Ix" secondAttribute="leading" id="bP2-pS-PT0"/>
-                                                <constraint firstItem="jZj-XY-7K3" firstAttribute="leading" secondItem="cJc-n3-hEB" secondAttribute="trailing" constant="8" symbolic="YES" id="lIC-v9-2Hi"/>
-                                                <constraint firstItem="bjk-7N-8Ix" firstAttribute="top" secondItem="jZj-XY-7K3" secondAttribute="bottom" constant="6" id="odH-Ir-ID6"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bjk-7N-8Ix" secondAttribute="trailing" constant="20" symbolic="YES" id="pzT-dl-eBv"/>
-                                                <constraint firstAttribute="trailing" secondItem="jZj-XY-7K3" secondAttribute="trailing" constant="186.5" id="uBa-EZ-Tac"/>
+                                                <constraint firstItem="jZj-XY-7K3" firstAttribute="leading" secondItem="cJc-n3-hEB" secondAttribute="trailing" constant="8" id="VHN-Z6-ydz"/>
+                                                <constraint firstItem="bjk-7N-8Ix" firstAttribute="leading" secondItem="cJc-n3-hEB" secondAttribute="trailing" constant="8" id="VTi-jm-T9G"/>
+                                                <constraint firstAttribute="bottom" secondItem="bjk-7N-8Ix" secondAttribute="bottom" constant="3.5" id="Z0h-Uf-6rr"/>
+                                                <constraint firstAttribute="trailing" secondItem="bjk-7N-8Ix" secondAttribute="trailing" id="dgX-Ir-uIP"/>
+                                                <constraint firstItem="jZj-XY-7K3" firstAttribute="top" secondItem="iFj-Sa-W4u" secondAttribute="top" constant="1" id="jZ8-qW-8hI"/>
+                                                <constraint firstAttribute="trailing" secondItem="jZj-XY-7K3" secondAttribute="trailing" id="sCR-2z-YPA"/>
                                                 <constraint firstItem="cJc-n3-hEB" firstAttribute="top" secondItem="iFj-Sa-W4u" secondAttribute="top" constant="1" id="uNX-5A-qzK"/>
                                                 <constraint firstItem="cJc-n3-hEB" firstAttribute="leading" secondItem="iFj-Sa-W4u" secondAttribute="leading" constant="15" id="vA8-jH-JvK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descricaoProduto" destination="bjk-7N-8Ix" id="2Ry-lG-k5X"/>
+                                            <outlet property="imagemProduto" destination="cJc-n3-hEB" id="2Az-0O-eAR"/>
+                                            <outlet property="tituloProduto" destination="jZj-XY-7K3" id="whP-mv-JLU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="r3j-KN-eyw" id="j3Q-HC-arI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -10,7 +10,9 @@ import UIKit
 
 class DetalhaProdutoTableViewCell: UITableViewCell {
     
-    
+    @IBOutlet weak var imagemProduto: UIImageView!
+    @IBOutlet weak var tituloProduto: UILabel!
+    @IBOutlet weak var descricaoProduto: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

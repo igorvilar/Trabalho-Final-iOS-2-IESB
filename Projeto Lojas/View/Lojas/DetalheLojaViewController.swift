@@ -12,10 +12,6 @@ class LojaDetalheViewController: UIViewController, UITableViewDelegate, UITableV
     
     var items: [String] = ["Swift1", "Swift2", "Swift3", "Swift1", "Swift2", "Swift3"]
     
-    @IBOutlet weak var imagemProduto: UIImageView!
-    @IBOutlet weak var tituloProduto: UILabel!
-    @IBOutlet weak var descricaoProduto: UILabel!
-    
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -36,9 +32,15 @@ class LojaDetalheViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "celulaIdentifier")! as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celulaIdentifier", for: indexPath)
+        if let cellLoja = cell as? DetalhaProdutoTableViewCell {
+            cellLoja.tituloProduto.text = "nome Produto"
+            cellLoja.imagemProduto.image = UIImage(named: "iphonex")
+            cellLoja.descricaoProduto.text = "descricao"
+            
+            return cellLoja
+        }
         
-        cell.textLabel?.text = self.items[indexPath.row]
         return cell
     }
 
