@@ -24,6 +24,7 @@ class LoginTableViewController: UITableViewController {
     }
 
     @IBAction func acaoLogar(_ sender: Any) {
+        self.performSegue(withIdentifier: "logarAppSegue", sender: nil)
         
     }
     // MARK: - Table view data source
