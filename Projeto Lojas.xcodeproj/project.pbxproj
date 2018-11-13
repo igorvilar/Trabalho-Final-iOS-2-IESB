@@ -13,6 +13,7 @@
 		781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */; };
 		78F6BDC7218938180009152D /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6BDC6218938180009152D /* PerfilController.swift */; };
 		9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706021829EAC00023D15 /* PerfilTableViewController.swift */; };
+		98958F1D219A7A320053F412 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98958F1C219A7A320053F412 /* LoginTableViewController.swift */; };
 		CC48E7E9218C584B0011B9E8 /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48E7E8218C584B0011B9E8 /* CadastroController.swift */; };
 		CC9729F521965B7500443A24 /* DetalhaProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9729F421965B7500443A24 /* DetalhaProdutoTableViewCell.swift */; };
 		F50B809F2141E1DD006FCEE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B809E2141E1DD006FCEE4 /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		78F6BDC6218938180009152D /* PerfilController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		95F418C42601BB57AB0B0162 /* Pods_Projeto_Lojas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projeto_Lojas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9831706021829EAC00023D15 /* PerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewController.swift; sourceTree = "<group>"; };
+		98958F1C219A7A320053F412 /* LoginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		CC48E7E8218C584B0011B9E8 /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		CC9729F421965B7500443A24 /* DetalhaProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhaProdutoTableViewCell.swift; sourceTree = "<group>"; };
 		F50B809B2141E1DD006FCEE4 /* Projeto Lojas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Projeto Lojas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,7 @@
 				9831706021829EAC00023D15 /* PerfilTableViewController.swift */,
 				F5B8BFCF215D833F00A2708C /* LoginViewController.swift */,
 				F50B80B02141EF5D006FCEE4 /* CadastroTableViewController.swift */,
+				98958F1C219A7A320053F412 /* LoginTableViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				F5338D032165A9E8001C2512 /* Usuario.swift in Sources */,
 				9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */,
 				CC48E7E9218C584B0011B9E8 /* CadastroController.swift in Sources */,
+				98958F1D219A7A320053F412 /* LoginTableViewController.swift in Sources */,
 				F5B8BFDA215D9CC200A2708C /* Loja.swift in Sources */,
 				CC9729F521965B7500443A24 /* DetalhaProdutoTableViewCell.swift in Sources */,
 				F50B80B12141EF5D006FCEE4 /* CadastroTableViewController.swift in Sources */,
