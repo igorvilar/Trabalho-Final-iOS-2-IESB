@@ -10,15 +10,20 @@ import UIKit
 
 class LojaDetalheViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    var items: [String] = ["Swift1", "Swift2", "Swift3", "Swift1", "Swift2", "Swift3"]
-    
     @IBOutlet var tableView: UITableView!
+    let controller = BuscaLojasController()
+    var loja: Array<Loja> = []
+    var produtos: Array<Produto> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "celulaIdentifier")
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        
+        // Busco a loja pelo nome
+        loja = controller.buscarLojaPorNome("Ricardo Eletro")
+        produtos = Array(loja[0].produtos)
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,15 +33,16 @@ class LojaDetalheViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count;
+        return produtos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
         let cell = tableView.dequeueReusableCell(withIdentifier: "celulaIdentifier", for: indexPath)
         if let cellLoja = cell as? DetalhaProdutoTableViewCell {
-            cellLoja.tituloProduto.text = "nome Produto"
-            cellLoja.imagemProduto.image = UIImage(named: "iphonex")
-            cellLoja.descricaoProduto.text = "descricao"
+            cellLoja.tituloProduto.text = produtos[indexPath.row].titulo
+            cellLoja.imagemProduto.image = UIImage(named: produtos[indexPath.row].imagem)
+            cellLoja.descricaoProduto.text = produtos[indexPath.row].descricao
             
             return cellLoja
         }
