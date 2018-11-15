@@ -1124,13 +1124,14 @@
         <!--Lista Video Games-->
         <scene sceneID="PiS-k8-Yfl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N06-Bj-jd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qDh-Nc-1aK" userLabel="Lista Video Games" customClass="FavoritoDetalheViewController" customModule="Projeto_Lojas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3N-hc-tLr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZo-qm-LFj">
-                                <rect key="frame" x="16" y="127" width="343" height="130"/>
+                                <rect key="frame" x="16" y="83" width="343" height="130"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXT-ex-ZZu">
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="130"/>
@@ -1225,7 +1226,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5BT-Ab-8e8">
-                                <rect key="frame" x="16" y="273" width="343" height="130"/>
+                                <rect key="frame" x="16" y="229" width="343" height="130"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4W-ko-FFt">
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="130"/>
@@ -1319,7 +1320,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUk-SE-BDa">
-                                <rect key="frame" x="16" y="420" width="343" height="130"/>
+                                <rect key="frame" x="16" y="376" width="343" height="130"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iM-Ba-szO">
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="130"/>
@@ -1410,7 +1411,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista Jogos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Saf-d3-wAr">
-                                <rect key="frame" x="16" y="77" width="343" height="36"/>
+                                <rect key="frame" x="16" y="33" width="343" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="nwo-8S-IJq"/>
                                 </constraints>
@@ -1438,9 +1439,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lista Jogos" id="ovf-Xc-rpU"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N06-Bj-jd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="416.80000000000001" y="-429.53523238380814"/>
+            <point key="canvasLocation" x="257" y="-1204"/>
         </scene>
         <!--Minhas Listas Table View Controller-->
         <scene sceneID="JlA-zs-XGd">
@@ -1502,7 +1502,7 @@
                                 <connections>
                                     <outlet property="nomeLojaLabel" destination="XV1-ho-0ES" id="aVZ-c1-dOi"/>
                                     <outlet property="quantidadeLojasLabel" destination="VPk-dI-2iB" id="L5t-Bm-hEn"/>
-                                    <segue destination="qDh-Nc-1aK" kind="show" identifier="MinhasListasTableViewCellSegue" id="E83-hP-bu0"/>
+                                    <segue destination="3v7-Xt-4Po" kind="show" identifier="MinhasListasTableViewCellSegue" id="nKu-g7-kM3"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CriarListaTableViewCell" rowHeight="130" id="YVV-8x-zF5" customClass="CriarListaTableViewCell" customModule="Projeto_Lojas" customModuleProvider="target">
@@ -1550,6 +1550,135 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETZ-tz-myQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-513" y="-430"/>
+        </scene>
+        <!--Lista Jogos Table View Controller-->
+        <scene sceneID="Knd-s7-v0W">
+            <objects>
+                <tableViewController id="3v7-Xt-4Po" customClass="ListaJogosTableViewController" customModule="Projeto_Lojas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vkW-F8-vU7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="JogoTableViewCell" rowHeight="140" id="NnL-yi-Y8o" customClass="JogoTableViewCell" customModule="Projeto_Lojas" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NnL-yi-Y8o" id="Mby-Dr-Gc3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-wI-fTj">
+                                            <rect key="frame" x="16" y="5" width="343" height="130"/>
+                                            <subviews>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw3-Z0-aBj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="130"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header-bahianinho" translatesAutoresizingMaskIntoConstraints="NO" id="DLg-Ip-neA">
+                                                            <rect key="frame" x="8" y="21.5" width="87" height="87"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="DLg-Ip-neA" secondAttribute="height" multiplier="1:1" id="3AQ-vr-kmB"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="45"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.19880631779999999" blue="0.1862504844" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstItem="DLg-Ip-neA" firstAttribute="centerY" secondItem="aw3-Z0-aBj" secondAttribute="centerY" id="5H7-4d-PxX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DLg-Ip-neA" secondAttribute="trailing" constant="8" id="eoA-Yo-cvc"/>
+                                                        <constraint firstAttribute="height" constant="130" id="gly-7p-Ve0"/>
+                                                        <constraint firstAttribute="width" constant="103" id="iyx-BS-B9I"/>
+                                                        <constraint firstItem="DLg-Ip-neA" firstAttribute="leading" secondItem="aw3-Z0-aBj" secondAttribute="leading" constant="8" id="mJE-RN-mdK"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video-game" translatesAutoresizingMaskIntoConstraints="NO" id="xDV-KB-BoR">
+                                                    <rect key="frame" x="114" y="82" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="Eu1-Mz-sb1"/>
+                                                        <constraint firstAttribute="height" constant="40" id="YCX-t2-e8X"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pc" translatesAutoresizingMaskIntoConstraints="NO" id="vcA-Cl-xrA">
+                                                    <rect key="frame" x="169" y="82" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="AaH-pC-g0o"/>
+                                                        <constraint firstAttribute="height" constant="40" id="zni-N3-YtV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="1cf-Jx-ywH">
+                                                    <rect key="frame" x="225" y="14" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="N98-CF-G2W"/>
+                                                        <constraint firstAttribute="width" constant="25" id="xt5-o9-TrQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casas Bahia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSL-X8-0bL">
+                                                    <rect key="frame" x="111" y="17" width="94" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ih1-hw-Ag0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="130" id="Czo-fd-OEW"/>
+                                                <constraint firstItem="xDV-KB-BoR" firstAttribute="top" secondItem="vcA-Cl-xrA" secondAttribute="top" id="GED-RX-ioB"/>
+                                                <constraint firstItem="1cf-Jx-ywH" firstAttribute="leading" secondItem="mSL-X8-0bL" secondAttribute="trailing" constant="20" id="Pz9-zV-hm1"/>
+                                                <constraint firstItem="xDV-KB-BoR" firstAttribute="top" secondItem="mSL-X8-0bL" secondAttribute="bottom" constant="44" id="YnG-Dj-CW2"/>
+                                                <constraint firstItem="aw3-Z0-aBj" firstAttribute="leading" secondItem="HQO-wI-fTj" secondAttribute="leading" id="aLP-cy-lF2"/>
+                                                <constraint firstItem="xDV-KB-BoR" firstAttribute="bottom" secondItem="HQO-wI-fTj" secondAttribute="bottomMargin" id="aux-9e-hKf"/>
+                                                <constraint firstItem="xDV-KB-BoR" firstAttribute="leading" secondItem="aw3-Z0-aBj" secondAttribute="trailing" constant="11" id="c9n-t8-o5c"/>
+                                                <constraint firstItem="vcA-Cl-xrA" firstAttribute="leading" secondItem="xDV-KB-BoR" secondAttribute="trailing" constant="15" id="d9C-VW-crw"/>
+                                                <constraint firstItem="mSL-X8-0bL" firstAttribute="leading" secondItem="aw3-Z0-aBj" secondAttribute="trailing" constant="8" id="duN-yg-LjA"/>
+                                                <constraint firstItem="aw3-Z0-aBj" firstAttribute="top" secondItem="HQO-wI-fTj" secondAttribute="top" id="ioq-Oe-cD2"/>
+                                                <constraint firstItem="1cf-Jx-ywH" firstAttribute="top" secondItem="HQO-wI-fTj" secondAttribute="top" constant="14" id="mbw-X5-or6"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                    <integer key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                    <size key="value" width="3" height="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HQO-wI-fTj" firstAttribute="leading" secondItem="Mby-Dr-Gc3" secondAttribute="leading" constant="16" id="6Cd-e6-cKz"/>
+                                        <constraint firstItem="HQO-wI-fTj" firstAttribute="top" secondItem="Mby-Dr-Gc3" secondAttribute="top" constant="5" id="6bO-Lv-KoL"/>
+                                        <constraint firstAttribute="bottom" secondItem="HQO-wI-fTj" secondAttribute="bottom" constant="4.5" id="DxL-ey-KKI"/>
+                                        <constraint firstAttribute="trailing" secondItem="HQO-wI-fTj" secondAttribute="trailing" constant="16" id="fKp-gF-4sV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3v7-Xt-4Po" id="Q2d-Sq-fZA"/>
+                            <outlet property="delegate" destination="3v7-Xt-4Po" id="WXD-Cg-rbf"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0Z-0n-9nT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="-440"/>
         </scene>
     </scenes>
     <resources>

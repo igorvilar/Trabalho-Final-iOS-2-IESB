@@ -11,6 +11,9 @@
 		7802F55D21892ADC009E8473 /* CriarListaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */; };
 		781B27DD2185ED400087649A /* MinhasListasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */; };
 		781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */; };
+		788D62F5219CCE6800364447 /* ListaJogosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D62F4219CCE6800364447 /* ListaJogosTableViewController.swift */; };
+		788D62F7219CD1E500364447 /* JogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D62F6219CD1E500364447 /* JogoTableViewCell.swift */; };
+		788D62F9219CD58E00364447 /* ListaJogosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D62F8219CD58E00364447 /* ListaJogosController.swift */; };
 		78F6BDC7218938180009152D /* PerfilController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6BDC6218938180009152D /* PerfilController.swift */; };
 		9831706121829EAC00023D15 /* PerfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9831706021829EAC00023D15 /* PerfilTableViewController.swift */; };
 		98958F1D219A7A320053F412 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98958F1C219A7A320053F412 /* LoginTableViewController.swift */; };
@@ -40,10 +43,13 @@
 /* Begin PBXFileReference section */
 		74CB775928536D8C1755555D /* Pods-Projeto Lojas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projeto Lojas.release.xcconfig"; path = "Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas.release.xcconfig"; sourceTree = "<group>"; };
 		7603CD92110C928BC5E95B3E /* Pods-Projeto Lojas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Projeto Lojas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Projeto Lojas/Pods-Projeto Lojas.debug.xcconfig"; sourceTree = "<group>"; };
-		7802F55A21891979009E8473 /* MinhasListasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MinhasListasController.swift; path = "Projeto Lojas/View/Favoritos/Cell/MinhasListasController.swift"; sourceTree = SOURCE_ROOT; };
+		7802F55A21891979009E8473 /* MinhasListasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MinhasListasController.swift; path = "Projeto Lojas/Controller/Favoritas/MinhasListasController.swift"; sourceTree = SOURCE_ROOT; };
 		7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarListaTableViewCell.swift; sourceTree = "<group>"; };
 		781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhasListasTableViewController.swift; sourceTree = "<group>"; };
 		781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhasListasTableViewCell.swift; sourceTree = "<group>"; };
+		788D62F4219CCE6800364447 /* ListaJogosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaJogosTableViewController.swift; sourceTree = "<group>"; };
+		788D62F6219CD1E500364447 /* JogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoTableViewCell.swift; sourceTree = "<group>"; };
+		788D62F8219CD58E00364447 /* ListaJogosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListaJogosController.swift; path = "Projeto Lojas/Controller/Favoritas/ListaJogosController.swift"; sourceTree = SOURCE_ROOT; };
 		78F6BDC6218938180009152D /* PerfilController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilController.swift; sourceTree = "<group>"; };
 		95F418C42601BB57AB0B0162 /* Pods_Projeto_Lojas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Projeto_Lojas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9831706021829EAC00023D15 /* PerfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilTableViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +103,18 @@
 			children = (
 				781B27DF2185EE060087649A /* MinhasListasTableViewCell.swift */,
 				7802F55C21892ADC009E8473 /* CriarListaTableViewCell.swift */,
+				788D62F6219CD1E500364447 /* JogoTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		788D62FA219DBD8F00364447 /* Favoritas */ = {
+			isa = PBXGroup;
+			children = (
+				7802F55A21891979009E8473 /* MinhasListasController.swift */,
+				788D62F8219CD58E00364447 /* ListaJogosController.swift */,
+			);
+			path = Favoritas;
 			sourceTree = "<group>";
 		};
 		84A7E93F8CC72D2F8AB65B64 /* Pods */ = {
@@ -191,6 +207,7 @@
 				F5B8BFD5215D840300A2708C /* ListaFavoritosViewController.swift */,
 				F5B8BFD7215D843D00A2708C /* FavoritoDetalheViewController.swift */,
 				781B27DC2185ED400087649A /* MinhasListasTableViewController.swift */,
+				788D62F4219CCE6800364447 /* ListaJogosTableViewController.swift */,
 			);
 			path = Favoritos;
 			sourceTree = "<group>";
@@ -198,7 +215,7 @@
 		F5B8BFC7215D7FC800A2708C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F5B8BFC9215D7FDD00A2708C /* Favoritos */,
+				788D62FA219DBD8F00364447 /* Favoritas */,
 				F5B8BFCA215D811B00A2708C /* Lojas */,
 				F5B8BFCB215D812500A2708C /* Login */,
 			);
@@ -215,14 +232,6 @@
 				F5338CFA2165A558001C2512 /* Database.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F5B8BFC9215D7FDD00A2708C /* Favoritos */ = {
-			isa = PBXGroup;
-			children = (
-				7802F55A21891979009E8473 /* MinhasListasController.swift */,
-			);
-			path = Favoritos;
 			sourceTree = "<group>";
 		};
 		F5B8BFCA215D811B00A2708C /* Lojas */ = {
@@ -377,7 +386,9 @@
 				F50B80B12141EF5D006FCEE4 /* CadastroTableViewController.swift in Sources */,
 				F50B809F2141E1DD006FCEE4 /* AppDelegate.swift in Sources */,
 				F5463C42214B2567000B4B90 /* BuscaLojasTableViewController.swift in Sources */,
+				788D62F5219CCE6800364447 /* ListaJogosTableViewController.swift in Sources */,
 				781B27DD2185ED400087649A /* MinhasListasTableViewController.swift in Sources */,
+				788D62F7219CD1E500364447 /* JogoTableViewCell.swift in Sources */,
 				F5338CFB2165A558001C2512 /* Database.swift in Sources */,
 				F5B8BFD8215D843D00A2708C /* FavoritoDetalheViewController.swift in Sources */,
 				781B27E02185EE060087649A /* MinhasListasTableViewCell.swift in Sources */,
@@ -385,6 +396,7 @@
 				F5B8BFD4215D83B600A2708C /* DetalheLojaViewController.swift in Sources */,
 				F5B8BFD6215D840300A2708C /* ListaFavoritosViewController.swift in Sources */,
 				7802F55B21891979009E8473 /* MinhasListasController.swift in Sources */,
+				788D62F9219CD58E00364447 /* ListaJogosController.swift in Sources */,
 				F5463C40214B2328000B4B90 /* LojaTableViewCell.swift in Sources */,
 				F5338D052165AA08001C2512 /* Favorito.swift in Sources */,
 				78F6BDC7218938180009152D /* PerfilController.swift in Sources */,

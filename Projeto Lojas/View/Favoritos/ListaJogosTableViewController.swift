@@ -1,22 +1,26 @@
 //
-//  MinhasListasTableViewController.swift
+//  ListaJogosTableViewController.swift
 //  Projeto Lojas
 //
-//  Created by Igor Vilar on 28/10/18.
+//  Created by Igor Vilar on 14/11/18.
 //  Copyright © 2018 com.iesb. All rights reserved.
 //
 
 import UIKit
 
-class MinhasListasTableViewController: UITableViewController {
+class ListaJogosTableViewController: UITableViewController {
+
+    var nomeLoja : String = ""
     
-    var minhasListasController = MinhasListasController()
-    
-    var favoritos : Array<Favorito> = []
+    var listaJogosController = ListaJogosController()
+
+    var listaJogos : Array<Produto> = []
+
     override func viewDidLoad() {
-	        super.viewDidLoad()
+        super.viewDidLoad()
         
-        favoritos = minhasListasController.lojasFavoritas()
+        print(nomeLoja)
+        listaJogos = listaJogosController.listaJogos()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,30 +37,20 @@ class MinhasListasTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return favoritos.count
+        return listaJogos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if favoritos.count == 0{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CriarListaTableViewCell") as! CriarListaTableViewCell
-            return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MinhasListasTableViewCell") as! MinhasListasTableViewCell
-            cell.tag = indexPath.row
-            cell.nomeLojaLabel.text = favoritos[indexPath.row].nome
-            cell.quantidadeLojasLabel.text =  "\(favoritos[indexPath.row].lojas.count) LOJAS"
-            return cell
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JogoTableViewCell") as! JogoTableViewCell
+
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Minhas Listas"
-    }
+ 
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,20 +87,14 @@ class MinhasListasTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "MinhasListasTableViewCellSegue" {
-            let destinationVC = segue.destination as! ListaJogosTableViewController
-            if let cell = sender as? UITableViewCell {
-                destinationVC.nomeLoja = favoritos[cell.tag].nome
-            }
-        }
     }
- 
+    */
 
 }
