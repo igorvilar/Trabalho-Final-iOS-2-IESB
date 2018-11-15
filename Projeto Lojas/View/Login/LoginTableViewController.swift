@@ -13,6 +13,8 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var emailLogin: UITextField!
     @IBOutlet weak var senhaLogin: UITextField!
     
+    var loginUsuario : String = ""
+    
     let usuario = PerfilController()
     
     override func viewDidLoad() {
