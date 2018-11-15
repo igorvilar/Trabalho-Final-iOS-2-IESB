@@ -29,10 +29,11 @@ class LoginTableViewController: UITableViewController {
         print(emailLogin.text! + "///" + senhaLogin.text!)
         let email = emailLogin.text ?? ""
         let senha = senhaLogin.text ?? ""
-        print(usuario.verifyLogin(emailLogin: email, senhaLogin: senha))
-//        if usuario.verifyLogin(emailLogin: emailLogin.text!, senhaLogin: senhaLogin.text!) {
+        if usuario.verifyLogin(emailLogin: email, senhaLogin: senha){
             self.performSegue(withIdentifier: "logarAppSegue", sender: nil)
-//        }
+        }else{
+            
+        }
         
     }
     // MARK: - Table view data source

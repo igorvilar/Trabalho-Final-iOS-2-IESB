@@ -30,8 +30,8 @@ class PerfilController {
     func verifyLogin(emailLogin : String, senhaLogin : String) -> Bool {
         do {
             filtro = "email CONTAINS[cd] '" + emailLogin + "'" //AND senha CONTAINS[cd] '" + senhaLogin + "'"
-            let usuario = try Realm().objects(Usuario.self).filter(filtro)[0]
-            if  usuario.email == email && usuario.senha == senha {
+            let usuario = try Realm().objects(Usuario.self).filter(filtro).first
+            if  usuario?.email == email && usuario?.senha == senha {
                 email.self = emailLogin
                 senha.self = senhaLogin
                 return true
