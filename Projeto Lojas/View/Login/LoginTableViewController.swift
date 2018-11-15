@@ -13,6 +13,8 @@ class LoginTableViewController: UITableViewController {
     @IBOutlet weak var emailLogin: UITextField!
     @IBOutlet weak var senhaLogin: UITextField!
     
+    let usuario = PerfilController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +26,13 @@ class LoginTableViewController: UITableViewController {
     }
 
     @IBAction func acaoLogar(_ sender: Any) {
-        self.performSegue(withIdentifier: "logarAppSegue", sender: nil)
+        print(emailLogin.text! + "///" + senhaLogin.text!)
+        let email = emailLogin.text ?? ""
+        let senha = senhaLogin.text ?? ""
+        print(usuario.verifyLogin(emailLogin: email, senhaLogin: senha))
+//        if usuario.verifyLogin(emailLogin: emailLogin.text!, senhaLogin: senhaLogin.text!) {
+            self.performSegue(withIdentifier: "logarAppSegue", sender: nil)
+//        }
         
     }
     // MARK: - Table view data source
