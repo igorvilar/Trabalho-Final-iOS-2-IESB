@@ -42,12 +42,12 @@ class BuscaLojasTableViewController: UITableViewController, UISearchBarDelegate 
             cellLoja.logoLoja.image = UIImage(named: controller.nomeLogoLoja(indexPath.row))
             let nomeImagemFavorita = controller.isLojaFavorita(indexPath.row) ? "liked" : "like"
             let imagemLike = UIImage(named: nomeImagemFavorita)
-            let imagemBotao = UIImageView(image: imagemLike)
+//            let imagemBotao = UIImageView(image: imagemLike)
             cellLoja.likeButton.imageView?.image = imagemLike
             
             cellLoja.vendeJogos.image = controller.vendeJogos(indexPath.row) ? UIImage(named: "video-game") : nil
             cellLoja.vendeComputador.image = controller.vendeComputadores(indexPath.row) ? UIImage(named: "pc") : nil
-            
+            cell.tag = indexPath.row;
             return cellLoja
         }
         
@@ -57,4 +57,20 @@ class BuscaLojasTableViewController: UITableViewController, UISearchBarDelegate 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "lojasDetalhesSegue" {
+            let destinationVC = segue.destination as! LojaDetalheViewController
+            if let cell = sender as? UITableViewCell {
+                destinationVC.nomeLoja = controller.nomeDaLoja(cell.tag)
+            }
+        }
+    }
+    
 }

@@ -12,11 +12,11 @@ import Realm
 class ListaJogosController {
     
     
-    func listaJogos() -> Array<Produto> {
+    func listaJogos(nomeLoja : String) -> Array<Loja> {
         do {
-            return Array(try Realm().objects(Produto.self))
+            return Array((try Realm().objects(Usuario.self)[0].listasFavoritos.filter("nome == '\(nomeLoja)'").first?.lojas)!)
         } catch {
-            return Array<Produto>.init()
+            return Array<Loja>.init()
         }
     }
     

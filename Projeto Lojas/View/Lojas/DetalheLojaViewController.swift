@@ -14,6 +14,10 @@ class LojaDetalheViewController: UIViewController, UITableViewDelegate, UITableV
     let controller = BuscaLojasController()
     var loja: Array<Loja> = []
     var produtos: Array<Produto> = []
+    var nomeLoja : String = ""
+    
+    @IBOutlet weak var nomeLojaLabel: UILabel!
+    @IBOutlet weak var logoLojaImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +26,9 @@ class LojaDetalheViewController: UIViewController, UITableViewDelegate, UITableV
         self.tableView.dataSource = self;
         
         // Busco a loja pelo nome
-        loja = controller.buscarLojaPorNome("Ricardo Eletro")
+        loja = controller.buscarLojaPorNome(nomeLoja)
+        nomeLojaLabel.text = loja[0].nome
+        logoLojaImage.image = UIImage.init(named: loja[0].iconeGrande)
         produtos = Array(loja[0].produtos)
     }
     

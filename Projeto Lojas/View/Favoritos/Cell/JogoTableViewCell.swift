@@ -10,6 +10,12 @@ import UIKit
 
 class JogoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var nomeLojaLabel: UILabel!
+    @IBOutlet weak var logoLojaImagem: UIImageView!
+    @IBOutlet weak var videogameImagem: UIImageView!
+    @IBOutlet weak var computadorImagem: UIImageView!
+    @IBOutlet weak var likeImagem: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -392,7 +392,7 @@
         <scene sceneID="3Ur-Rf-740">
             <objects>
                 <tableViewController id="s6L-Ry-JfU" customClass="BuscaLojasTableViewController" customModule="Projeto_Lojas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VMY-Sd-qzd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VMY-Sd-qzd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -517,6 +517,7 @@
                                     <outlet property="nomeLoja" destination="xk7-mY-zhu" id="vzo-TE-Qw9"/>
                                     <outlet property="vendeComputador" destination="nFN-2c-J6y" id="XNm-R8-UaO"/>
                                     <outlet property="vendeJogos" destination="iBc-Zm-LZD" id="dMx-UL-Z8Y"/>
+                                    <segue destination="r3j-KN-eyw" kind="show" identifier="lojasDetalhesSegue" id="dVx-XS-QRa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -986,35 +987,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_ricardo_eletro" translatesAutoresizingMaskIntoConstraints="NO" id="zWY-6c-bqr">
-                                <rect key="frame" x="78" y="65" width="219" height="59"/>
+                                <rect key="frame" x="78" y="109" width="219" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="219" id="Oks-1C-wGK"/>
                                     <constraint firstAttribute="height" constant="59" id="ytf-wk-c75"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="8s4-N3-P6k">
-                                <rect key="frame" x="310" y="32" width="20" height="20"/>
+                                <rect key="frame" x="310" y="76" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="rer-f1-T2A"/>
                                     <constraint firstAttribute="height" constant="20" id="xcL-mF-grS"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="RMA-A4-QUg">
-                                <rect key="frame" x="345" y="32" width="20" height="20"/>
+                                <rect key="frame" x="345" y="76" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Ixi-A2-PAG"/>
                                     <constraint firstAttribute="height" constant="20" id="sxI-dC-XK5"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="84n-6x-S2X">
-                                <rect key="frame" x="102" y="174" width="171" height="54"/>
+                                <rect key="frame" x="102" y="218" width="171" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="mlL-XF-EJX"/>
                                     <constraint firstAttribute="width" constant="171" id="vzw-Cx-eVx"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ricardo Eletro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wF-cI-uQg">
-                                <rect key="frame" x="16" y="138" width="343" height="28"/>
+                                <rect key="frame" x="16" y="182" width="343" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="dBy-wO-ALP"/>
                                 </constraints>
@@ -1023,7 +1024,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todos Produtos/Serviços" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="BGG-u8-4p0">
-                                <rect key="frame" x="16" y="236" width="343" height="21"/>
+                                <rect key="frame" x="16" y="280" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="s5z-5P-jvL"/>
                                 </constraints>
@@ -1114,6 +1115,8 @@
                         <viewLayoutGuide key="safeArea" id="D1A-ER-c9K"/>
                     </view>
                     <connections>
+                        <outlet property="logoLojaImage" destination="zWY-6c-bqr" id="nUD-8d-cBh"/>
+                        <outlet property="nomeLojaLabel" destination="3wF-cI-uQg" id="cxJ-ts-ghl"/>
                         <outlet property="tableView" destination="yLn-cx-LEC" id="eME-rL-Ol4"/>
                     </connections>
                 </viewController>
@@ -1555,7 +1558,7 @@
         <scene sceneID="Knd-s7-v0W">
             <objects>
                 <tableViewController id="3v7-Xt-4Po" customClass="ListaJogosTableViewController" customModule="Projeto_Lojas" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vkW-F8-vU7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vkW-F8-vU7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1563,8 +1566,8 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="JogoTableViewCell" rowHeight="140" id="NnL-yi-Y8o" customClass="JogoTableViewCell" customModule="Projeto_Lojas" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NnL-yi-Y8o" id="Mby-Dr-Gc3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NnL-yi-Y8o" id="Mby-Dr-Gc3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-wI-fTj">
@@ -1615,10 +1618,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="1cf-Jx-ywH">
-                                                    <rect key="frame" x="225" y="14" width="25" height="25"/>
+                                                    <rect key="frame" x="310" y="14" width="25" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="N98-CF-G2W"/>
-                                                        <constraint firstAttribute="width" constant="25" id="xt5-o9-TrQ"/>
+                                                        <constraint firstAttribute="height" constant="25" id="3qI-k3-qpW"/>
+                                                        <constraint firstAttribute="width" constant="25" id="DYz-G8-0FF"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casas Bahia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSL-X8-0bL">
@@ -1633,9 +1636,9 @@
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="1cf-Jx-ywH" firstAttribute="top" secondItem="HQO-wI-fTj" secondAttribute="top" constant="14" id="74Y-Et-COE"/>
                                                 <constraint firstAttribute="height" constant="130" id="Czo-fd-OEW"/>
                                                 <constraint firstItem="xDV-KB-BoR" firstAttribute="top" secondItem="vcA-Cl-xrA" secondAttribute="top" id="GED-RX-ioB"/>
-                                                <constraint firstItem="1cf-Jx-ywH" firstAttribute="leading" secondItem="mSL-X8-0bL" secondAttribute="trailing" constant="20" id="Pz9-zV-hm1"/>
                                                 <constraint firstItem="xDV-KB-BoR" firstAttribute="top" secondItem="mSL-X8-0bL" secondAttribute="bottom" constant="44" id="YnG-Dj-CW2"/>
                                                 <constraint firstItem="aw3-Z0-aBj" firstAttribute="leading" secondItem="HQO-wI-fTj" secondAttribute="leading" id="aLP-cy-lF2"/>
                                                 <constraint firstItem="xDV-KB-BoR" firstAttribute="bottom" secondItem="HQO-wI-fTj" secondAttribute="bottomMargin" id="aux-9e-hKf"/>
@@ -1643,7 +1646,7 @@
                                                 <constraint firstItem="vcA-Cl-xrA" firstAttribute="leading" secondItem="xDV-KB-BoR" secondAttribute="trailing" constant="15" id="d9C-VW-crw"/>
                                                 <constraint firstItem="mSL-X8-0bL" firstAttribute="leading" secondItem="aw3-Z0-aBj" secondAttribute="trailing" constant="8" id="duN-yg-LjA"/>
                                                 <constraint firstItem="aw3-Z0-aBj" firstAttribute="top" secondItem="HQO-wI-fTj" secondAttribute="top" id="ioq-Oe-cD2"/>
-                                                <constraint firstItem="1cf-Jx-ywH" firstAttribute="top" secondItem="HQO-wI-fTj" secondAttribute="top" constant="14" id="mbw-X5-or6"/>
+                                                <constraint firstAttribute="trailing" secondItem="1cf-Jx-ywH" secondAttribute="trailing" constant="8" id="toq-0W-O6i"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1668,6 +1671,13 @@
                                         <constraint firstAttribute="trailing" secondItem="HQO-wI-fTj" secondAttribute="trailing" constant="16" id="fKp-gF-4sV"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="computadorImagem" destination="vcA-Cl-xrA" id="bWt-c4-iaY"/>
+                                    <outlet property="likeImagem" destination="1cf-Jx-ywH" id="mbb-Fb-ygx"/>
+                                    <outlet property="logoLojaImagem" destination="DLg-Ip-neA" id="XrP-nE-ciM"/>
+                                    <outlet property="nomeLojaLabel" destination="mSL-X8-0bL" id="tsi-My-r6X"/>
+                                    <outlet property="videogameImagem" destination="xDV-KB-BoR" id="sLw-7B-fwa"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

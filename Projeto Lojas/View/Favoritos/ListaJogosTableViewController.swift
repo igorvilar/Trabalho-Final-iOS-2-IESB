@@ -14,13 +14,13 @@ class ListaJogosTableViewController: UITableViewController {
     
     var listaJogosController = ListaJogosController()
 
-    var listaJogos : Array<Produto> = []
+    var listaJogos : Array<Loja> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(nomeLoja)
-        listaJogos = listaJogosController.listaJogos()
+        listaJogos = listaJogosController.listaJogos(nomeLoja: nomeLoja)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,7 +43,15 @@ class ListaJogosTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "JogoTableViewCell") as! JogoTableViewCell
-
+        cell.nomeLojaLabel.text = listaJogos[indexPath.row].nome
+        cell.videogameImagem.isHidden = !listaJogos[indexPath.row].vendeJogos
+        cell.computadorImagem.isHidden = !listaJogos[indexPath.row].vendeComputador
+        cell.logoLojaImagem.image = UIImage.init(named: listaJogos[indexPath.row].iconePequeno)
+        if listaJogos[indexPath.row].favorita{
+            cell.likeImagem.image = UIImage.init(named: "liked");
+        }else{
+            cell.likeImagem.image = UIImage.init(named: "like");
+        }
         return cell
     }
     
