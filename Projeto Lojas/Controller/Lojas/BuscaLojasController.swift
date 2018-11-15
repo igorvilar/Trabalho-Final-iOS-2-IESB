@@ -106,6 +106,17 @@ class BuscaLojasController {
         }
         filtro = "nome CONTAINS[cd] '" + searchText + "'"
     }
+    
+    func buscarLojaPorNome(_ nomeLoja: String) -> Loja?{
+        do {
+            filtro = "nome CONTAINS[cd] '" + nomeLoja + "'"
+            let loja = try Realm().objects(Loja.self).filter(filtro)
+            return loja[0]
+        } catch {
+            print("erro ao buscar Loja")
+            return nil
+        }
+    }
 }
 
 
