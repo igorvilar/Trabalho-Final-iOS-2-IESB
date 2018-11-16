@@ -1127,7 +1127,6 @@
         <!--Lista Video Games-->
         <scene sceneID="PiS-k8-Yfl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N06-Bj-jd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qDh-Nc-1aK" userLabel="Lista Video Games" customClass="FavoritoDetalheViewController" customModule="Projeto_Lojas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3N-hc-tLr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1442,6 +1441,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lista Jogos" id="ovf-Xc-rpU"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N06-Bj-jd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="257" y="-1204"/>
         </scene>
@@ -1693,12 +1693,12 @@
     </scenes>
     <resources>
         <image name="add-big" width="126" height="126"/>
-        <image name="exit" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="exit" width="512" height="512"/>
         <image name="header-bahianinho" width="644" height="599"/>
-        <image name="iphonex" width="834.239990234375" height="829.44000244140625"/>
+        <image name="iphonex" width="3476" height="3456"/>
         <image name="like" width="25" height="25"/>
         <image name="liked" width="70" height="63"/>
-        <image name="login-background" width="827.52001953125" height="1102.0799560546875"/>
+        <image name="login-background" width="3448" height="4592"/>
         <image name="logo" width="512" height="474"/>
         <image name="logo_ricardo_eletro" width="1135" height="393"/>
         <image name="map" width="145" height="36"/>

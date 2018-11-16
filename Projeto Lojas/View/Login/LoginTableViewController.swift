@@ -28,15 +28,20 @@ class LoginTableViewController: UITableViewController {
     }
 
     @IBAction func acaoLogar(_ sender: Any) {
-        print(emailLogin.text! + "///" + senhaLogin.text!)
         let email = emailLogin.text ?? ""
         let senha = senhaLogin.text ?? ""
         if usuario.verifyLogin(emailLogin: email, senhaLogin: senha){
             self.performSegue(withIdentifier: "logarAppSegue", sender: nil)
         }else{
-            
+            mostrarAlerta(title: "Atenção", message: "Email ou senha incorretos.")
         }
         
+    }
+    
+    func mostrarAlerta(title: String, message: String) {
+        let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        present(alertaGuia, animated: true, completion: nil)
     }
     // MARK: - Table view data source
 

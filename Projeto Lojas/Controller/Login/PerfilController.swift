@@ -12,15 +12,22 @@ class PerfilController {
     var todasAsLojas: Results<Loja>?
     var lojasFiltradas: Results<Loja>?
     var filtro: String = ""
-    var email: String = ""
-    var senha: String = ""
+    
+    func selectUsuario(email : String, senha : String) -> Usuario?{
+        do {
+            filtro = "email == '" + email + "' AND senha == '" + senha + "'"
+            let usuario = try Realm().objects(Usuario.self).filter(filtro).first
+            return usuario
+        } catch {
+            print("erro")
+            return nil
+        }
+    }
     
     func selectUsuario() -> Usuario?{
         do {
-//            filtro = "email CONTAINS[cd] '" + email + "' AND senha CONTAINS[cd] '" + senha + "'"
-//            let usuario = try Realm().objects(Usuario.self).filter(filtro)
-            let usuario = try Realm().objects(Usuario.self)
-            return usuario[0]
+            let usuario = try Realm().objects(Usuario.self).first
+            return usuario
         } catch {
             print("erro")
             return nil
@@ -29,11 +36,8 @@ class PerfilController {
     
     func verifyLogin(emailLogin : String, senhaLogin : String) -> Bool {
         do {
-            filtro = "email CONTAINS[cd] '" + emailLogin + "'" //AND senha CONTAINS[cd] '" + senhaLogin + "'"
-            let usuario = try Realm().objects(Usuario.self).filter(filtro).first
-            if  usuario?.email == email && usuario?.senha == senha {
-                email.self = emailLogin
-                senha.self = senhaLogin
+            filtro = "email == '" + emailLogin + "' AND senha == '" + senhaLogin + "'"
+            if (try Realm().objects(Usuario.self).filter(filtro).first) != nil {
                 return true
             } else {
                 print ("Usuário não encontrado")
