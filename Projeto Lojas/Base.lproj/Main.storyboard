@@ -831,7 +831,7 @@
                                                     <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1693,12 +1693,12 @@
     </scenes>
     <resources>
         <image name="add-big" width="126" height="126"/>
-        <image name="exit" width="512" height="512"/>
+        <image name="exit" width="409.60000610351562" height="409.60000610351562"/>
         <image name="header-bahianinho" width="644" height="599"/>
-        <image name="iphonex" width="3476" height="3456"/>
+        <image name="iphonex" width="834.239990234375" height="829.44000244140625"/>
         <image name="like" width="25" height="25"/>
         <image name="liked" width="70" height="63"/>
-        <image name="login-background" width="3448" height="4592"/>
+        <image name="login-background" width="827.52001953125" height="1102.0799560546875"/>
         <image name="logo" width="512" height="474"/>
         <image name="logo_ricardo_eletro" width="1135" height="393"/>
         <image name="map" width="145" height="36"/>
