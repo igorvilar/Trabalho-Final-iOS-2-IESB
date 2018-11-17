@@ -15,12 +15,16 @@ class PerfilTableViewController: UITableViewController {
     @IBOutlet weak var emailUsuario: UILabel!
     @IBOutlet weak var telefoneUsuario: UILabel!
     @IBOutlet weak var quantidadeFavorito: UILabel!
-    @IBOutlet weak var fotoFavorito: UIImageView!
+    @IBOutlet weak var fotoFavorito: UIImageView! 
     
     let usuario = PerfilController()
     
+    var usuarioLogin : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("usuarioLogin: \(usuarioLogin)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,6 +54,8 @@ class PerfilTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 5
     }
+    
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

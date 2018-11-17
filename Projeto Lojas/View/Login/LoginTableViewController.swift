@@ -40,8 +40,8 @@ class LoginTableViewController: UITableViewController {
     
     func mostrarAlerta(title: String, message: String) {
         let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-        present(alertaGuia, animated: true, completion: nil)
+        alertaGuia.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+         present(alertaGuia, animated: true, completion: nil)
     }
     // MARK: - Table view data source
 
@@ -109,5 +109,18 @@ class LoginTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "logarAppSegue" {
+            let destinationVC = segue.destination as! PerfilTableViewController
+            destinationVC.usuarioLogin = emailLogin.text ?? ""
+        }
+    }
 
 }
