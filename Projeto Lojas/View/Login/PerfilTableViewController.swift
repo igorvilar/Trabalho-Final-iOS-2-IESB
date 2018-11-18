@@ -20,6 +20,7 @@ class PerfilTableViewController: UITableViewController {
     let usuario = PerfilController()
     
     var usuarioLogin : String = ""
+    var senhaLogin : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +32,24 @@ class PerfilTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        fotoUsuario.image = UIImage(named: usuario.selectUsuario()?.foto ?? "user-logo")
-        nomeUsuario.text = usuario.selectUsuario()?.nome
-        emailUsuario.text = usuario.selectUsuario()?.email
-        telefoneUsuario.text = usuario.selectUsuario()?.telefone
-        quantidadeFavorito.text = "\(usuario.selectUsuario()?.listasFavoritos.count ?? 0)"
-        if usuario.selectUsuario()?.listasFavoritos.count ?? 0 == 0 {
+        if UserDefaults.standard.bool(forKey: "executouLogin") {
+            carregaPerfil()
+        }
+    }
+    
+    
+    func carregaPerfil(){
+        fotoUsuario.image = UIImage(named: usuario.selectUsuario(email: usuarioLogin, senha: senhaLogin)?.foto ?? "user-logo")
+        nomeUsuario.text = usuario.selectUsuario(email: usuarioLogin, senha: senhaLogin)?.nome
+        emailUsuario.text = usuario.selectUsuario(email: usuarioLogin, senha: senhaLogin)?.email
+        telefoneUsuario.text = usuario.selectUsuario(email: usuarioLogin, senha: senhaLogin)?.telefone
+        quantidadeFavorito.text = "\(usuario.selectUsuario(email: usuarioLogin, senha: senhaLogin)?.listasFavoritos.count ?? 0)"
+        if usuario.selectUsuario(email: usuarioLogin, senha: senhaLogin)?.listasFavoritos.count ?? 0 == 0 {
             fotoFavorito.image = UIImage(named: "like")
         } else {
             fotoFavorito.image = UIImage(named: "liked")
         }
     }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

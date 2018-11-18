@@ -31,6 +31,7 @@ class LoginTableViewController: UITableViewController {
         let email = emailLogin.text ?? ""
         let senha = senhaLogin.text ?? ""
         if usuario.verifyLogin(emailLogin: email, senhaLogin: senha){
+            UserDefaults.standard.set(true, forKey: "executouLogin")
             self.performSegue(withIdentifier: "logarAppSegue", sender: nil)
         }else{
             mostrarAlerta(title: "Atenção", message: "Email ou senha incorretos.")
@@ -120,6 +121,7 @@ class LoginTableViewController: UITableViewController {
         if segue.identifier == "logarAppSegue" {
             let destinationVC = segue.destination as! PerfilTableViewController
             destinationVC.usuarioLogin = emailLogin.text ?? ""
+            destinationVC.senhaLogin = senhaLogin.text ?? ""
         }
     }
 
