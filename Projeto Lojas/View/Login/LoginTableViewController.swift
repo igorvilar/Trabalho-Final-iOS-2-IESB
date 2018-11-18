@@ -25,8 +25,17 @@ class LoginTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        UserDefaults.standard.set("", forKey: "usuarioCadastrado")
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        let usuarioCadastrado = UserDefaults.standard.string(forKey: "usuarioCadastrado") ?? ""
+        if usuarioCadastrado != "" {
+            UserDefaults.standard.set("", forKey: "usuarioCadastrado")
+            emailLogin.text = UserDefaults.standard.string(forKey: "email")
+            mostrarAlerta(title: "Sucesso", message: "Bem vindo \(usuarioCadastrado)! Cadastro efetuado! Informe sua senha para login.")
+        }
+    }
     @IBAction func acaoLogar(_ sender: Any) {
         let email = emailLogin.text ?? ""
         let senha = senhaLogin.text ?? ""

@@ -26,7 +26,9 @@ class CadastroTableViewController: UITableViewController {
     }
 
     @IBAction func fecharCadastro() {
-        self.dismiss(animated: true, completion: nil)
+        UserDefaults.standard.set(nome.text, forKey: "usuarioCadastrado")
+        UserDefaults.standard.set(email.text, forKey: "email")
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func cadastrar(_ sender: Any) {
