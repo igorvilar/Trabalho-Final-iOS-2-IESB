@@ -101,7 +101,7 @@ class MinhasListasTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "MinhasListasTableViewCellSegue" {
-            let destinationVC = segue.destination as! FavoritoDetalheViewController
+            let destinationVC = segue.destination as! ListaJogosTableViewController
             if let cell = sender as? UITableViewCell {
                 destinationVC.nomeLoja = favoritos[cell.tag].nome
             }
